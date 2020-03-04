@@ -9,19 +9,22 @@ app.use(bodyParser.json())
 
 router.get('/testSecuredRoute', (req, res, next) => {
   res.json({
-    message : 'You made it to the secure route'
+    message : 'You made it to the secure route',
+    json: req.data
   })
 });
 
 router.post('/articles', async (req, res, next) => {
   try {
-    const article = {
+    let article = {
       article_title: req.body.article_title,
       article_body: req.body.article_body,
-      article_date: req.body.article_date
+      article_date: req.body.article_date,
+      article_owner: {}
     }
+    article.article_owner = req.user.user
 
-    await axios.post(config.DB_URL + "blog-articles", article).then(data => {
+    axios.post(config.DB_URL + "blog-articles", article).then(data => {
       return res.json({
         message : 'Article Successfully created',
         article: data.data
@@ -29,6 +32,24 @@ router.post('/articles', async (req, res, next) => {
     }).catch(err => {
       return res.json({
         message : 'Article creation failed',
+        error: err
+      })
+    })
+  } catch (error) {
+    next(error)
+  }
+})
+
+router.delete('/article/:article_title', async (req, res, next) => {
+  try {
+    axios.delete(config.DB_URL + 'blog-articles/*?q={"article_title":"' + req.params.article_title + '"}').then(data => {
+      return res.json({
+        message : 'Article Successfully deleted',
+        deleted: data.data.result
+      })
+    }).catch(err => {
+      return res.json({
+        message : 'Article deletion failed',
         error: err
       })
     })

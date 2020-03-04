@@ -56,10 +56,9 @@ passport.use('login', new localStrategy({
     }
     // Password validation
     let isPasswordOK = bcrypt.compareSync(password, user.data[0].user_password)
-
     let token = jwt.sign({
       data: {
-        user_mail: mail
+        user: user.data[0]
       }
     }, config.SECRET)
 
