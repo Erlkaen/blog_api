@@ -4,12 +4,12 @@ const bodyParser = require('body-parser')
 const axios = require('axios')
 const app = express()
 const passport = require('passport')
-
+const cors = require('cors')
 const routes = require('./routes/routes.js')
 const secureRoute = require('./routes/secureRoutes.js')
 
 require('./auth/auth.js')
-
+app.use(cors())
 app.use(bodyParser.json())
 
 axios.interceptors.request.use((conf) => {
