@@ -2,7 +2,7 @@
 
 ***Par Nicolas Garcia et Tilo Papin.***
 
-#### Installation et lancement :
+### Installation et lancement :
 
 ```
 > npm install
@@ -49,3 +49,11 @@ DELETE https://blogapiapidaepapingarcia.herokuapp.com/article/:article_title
 ```
 PATCH https://blogapiapidaepapingarcia.herokuapp.com/article/:article_title
 ```
+
+### URL de l'application complete :
+
+```
+url
+```
+
+*Nous n'avons pas eu le temps de faire s'actualiser l'interface après connexion et déconnexion sur le site, ainsi il faudra actualiser la page après ces actions.*
