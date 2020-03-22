@@ -56,4 +56,4 @@ PATCH https://blogapiapidaepapingarcia.herokuapp.com/article/:article_title
 url
 ```
 
-*Nous n'avons pas eu le temps de faire s'actualiser l'interface après connexion et déconnexion sur le site, ainsi il faudra actualiser la page après ces actions.*
+**Nous n'avons pas eu le temps de faire s'actualiser l'interface après connexion et déconnexion sur le site, ainsi il faudra actualiser la page après ces actions.**
