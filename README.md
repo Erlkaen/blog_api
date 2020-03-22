@@ -50,10 +50,6 @@ DELETE https://blogapiapidaepapingarcia.herokuapp.com/article/:article_title
 PATCH https://blogapiapidaepapingarcia.herokuapp.com/article/:article_title
 ```
 
-### URL de l'application complete :
+### Application complete :
 
-```
-url
-```
-
-**Nous n'avons pas eu le temps de faire s'actualiser l'interface après connexion et déconnexion sur le site, ainsi il faudra actualiser la page après ces actions.**
+Le front ne compile pas.
