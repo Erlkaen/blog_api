@@ -52,4 +52,8 @@ PATCH https://blogapiapidaepapingarcia.herokuapp.com/article/:article_title
 
 ### Application complete :
 
-Le front ne compile pas.
+```
+https://h01ql.csb.app/#/Articles
+```
+
+**Nous n'avons pas eu le temps de terminer le front, ainsi il faut actualiser la page pour voir les changements après connexion et déconexion.**
